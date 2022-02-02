@@ -1,0 +1,4 @@
+env/
+*.pyc
+secret_settings.py
+.idea
