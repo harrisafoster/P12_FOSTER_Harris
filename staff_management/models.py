@@ -4,7 +4,7 @@ from django.contrib.auth.models import Group
 
 class User(AbstractUser):
     def __str__(self):
-        return f"User {self.id} is {self.username}"
+        return f"User {self.id}, {self.username}"
 
     class Meta:
         ordering = ['id']
