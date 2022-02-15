@@ -1,6 +1,6 @@
 # P12_FOSTER_Harris
 
-##epic_events
+## epic_events
 
 Projet 12 OpenClassrooms
 
@@ -92,7 +92,7 @@ $ python manage.py runserver
 ```
 Puis accédez à l'API via le port 8000 sur votre navigateur sur http://127.0.0.1:8000/
 
-###Logging
+### Logging
 - Veuillez vous référer au fichier errors.logs (racine/logging/errors.logs)
 
 ## Built with
