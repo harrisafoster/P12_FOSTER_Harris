@@ -4,7 +4,7 @@
 
 Projet 12 OpenClassrooms
 
-###epic_events Entity Relation Diagram
+### epic_events Entity Relation Diagram
 [ERD](ERD_epic_events.pdf)
 
 ## API RESTful (back-end) de gestion de clients/événements/contrats (CRM) qui permet aux utilisateurs de :
