@@ -1,6 +1,7 @@
 from rest_framework import permissions
 from rest_framework.viewsets import ModelViewSet
 import logging
+from rest_framework import filters
 
 from .models import User, Team
 from .serializers import UserSerializer, TeamSerializer
@@ -17,6 +18,8 @@ class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated, AccountPermission]
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['username']
 
 
 class TeamViewSet(ModelViewSet):
