@@ -17,8 +17,7 @@ class Event(models.Model):
     contract = models.OneToOneField(Contract, on_delete=models.CASCADE, primary_key=True)
 
     def __str__(self):
-        return f"Contracted event {str(self.contract)} is Client {str(self.client.id)}'s event. " \
-               f"Assigned support contact is agent {str(self.support_contact)}"
+        return f"Event {str(self.contract.id)}, {str(self.client)}, support_contact: {str(self.support_contact)}"
 
     class Meta:
         ordering = ['-event_date']
