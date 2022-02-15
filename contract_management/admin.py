@@ -4,6 +4,9 @@ from .models import Contract
 
 
 class ContractAdmin(admin.ModelAdmin):
+    """
+    Custom display to render the admin interface more readable.
+    """
     list_display = ('contract_id', 'client', 'sales_contact')
 
     def contract_id(self,obj):

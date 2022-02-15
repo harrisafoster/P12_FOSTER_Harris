@@ -11,6 +11,9 @@ logger = logging.getLogger('django')
 
 
 class ContractViewSet(ModelViewSet):
+    """
+    Django default API endpoints for CRUD operations relating to the Contract object.
+    """
     queryset = Contract.objects.all()
     serializer_class = ContractSerializer
     permission_classes = [permissions.IsAuthenticated, ContractPermission]

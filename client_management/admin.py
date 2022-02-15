@@ -4,6 +4,9 @@ from .models import Client
 
 
 class ClientAdmin(admin.ModelAdmin):
+    """
+    Custom display to render the admin interface more readable.
+    """
     list_display = ('client_id', 'client_name', 'client_company', 'sales_contact')
 
     def client_id(self, obj):

@@ -4,6 +4,9 @@ from .models import Event
 
 
 class EventAdmin(admin.ModelAdmin):
+    """
+    Custom display to render the admin interface more readable.
+    """
     list_display = ('event_id', 'client_info', 'contract_info', 'support_contact_info')
 
     def event_id(self, obj):

@@ -2,6 +2,13 @@ from rest_framework import permissions
 
 
 class ClientPermission(permissions.BasePermission):
+    """
+    Custom permission for Client object:
+
+    Only management can delete clients via the admin interface
+    Support team users can only read clients
+    Sales team users can read, create, update clients
+    """
     def has_permission(self, request, view):
         user = request.user
         if request.method == 'DELETE':

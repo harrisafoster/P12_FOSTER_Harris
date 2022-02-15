@@ -2,6 +2,13 @@ from rest_framework import permissions
 
 
 class ContractPermission(permissions.BasePermission):
+    """
+    Custom permission for Contract object:
+
+    Only management users can delete contracts via the admin interface
+    Support team users can read contracts
+    Sales team users can read/create/update contracts
+    """
     def has_permission(self, request, view):
         if request.method == 'DELETE':
             return False

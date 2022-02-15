@@ -17,6 +17,7 @@ class EventSerializer(serializers.ModelSerializer):
         instance.event_date = validated_data.get('event_date', instance.event_date)
         instance.notes = validated_data.get('notes', instance.notes)
 
+        # Verify that support contact is in fact a member of the support team
         if not instance.support_contact.groups.filter(name="support").exists():
             raise serializers.ValidationError("Support_contact must be in support team.")
         else:

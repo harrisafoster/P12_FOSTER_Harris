@@ -11,6 +11,9 @@ logger = logging.getLogger('django')
 
 
 class ClientViewSet(ModelViewSet):
+    """
+    Django default API endpoints for CRUD operations relating to the Client object.
+    """
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
     permission_classes = [permissions.IsAuthenticated, ClientPermission]

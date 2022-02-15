@@ -2,6 +2,13 @@ from rest_framework import permissions
 
 
 class EventPermission(permissions.BasePermission):
+    """
+    Custom permission for Event object:
+
+    Only management team members can delete events via the admin interface
+    Support team users can read/update events if the event's status has already been set to True by the sales team user
+    Sales team users can read/update/create events
+    """
     def has_permission(self, request, view):
         user = request.user
         if request.method == 'DELETE':
